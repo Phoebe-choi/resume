@@ -72,13 +72,13 @@ hr{
 }
 .banner{
     height: 515px;
-    background-image:url(./img/rs-cover8.jpg);
+    background-image:url(./img/rs-cover19.jpg);
     background-position: center center; /*rs-cover居中*/
     background-size: cover; /*rs-cover自适应*/
 }
 .banner .mask{
     height:515px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
 
 }
 .mycard{
