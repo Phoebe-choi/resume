@@ -78,13 +78,13 @@ h2,h3,h4,h5,h6{
 }
 .banner{
     height: 515px;
-    background-image:url(./img/rs-cover20.jpg);
+    background-image:url(./img/rs-cover1.jpg);
     background-position: center center; /*rs-cover居中*/
     background-size: cover; /*rs-cover自适应*/
 }
 .banner .mask{
     height:515px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
 
 }
 .mycard{
@@ -252,6 +252,7 @@ section.skillBar .progressBar .progress{
 }
 section.portfolio{
     text-align: center;
+    margin-bottom: 100px;
 }
 section.portfolio>nav{
     text-align: center;
@@ -304,9 +305,11 @@ section.portfolio .works{
 }
 section.portfolio .works> .big,
 section.portfolio .works> .small{
-    position: absolute;
-    box-shadow: 0px 1px 8px -1px rgba(0,0,0,0.50);
+    position: absolute;    
+    box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.22);
 }
+
+
 
 
     
