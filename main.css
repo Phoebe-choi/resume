@@ -38,7 +38,7 @@ h2,h3,h4,h5,h6{
 }
 .topNavBar.sticky{
     background-color: white;
-    padding: 15px 0;
+    padding: 10px 0;
     z-index: 1;
     box-shadow: -2px 15px 20px -13px rgba(0,0,0,0.75);
     color: #3d4451;
@@ -68,7 +68,7 @@ h2,h3,h4,h5,h6{
     display: block; /*生成一个块元素盒*/
     position: relative;
 }
-.topNavBar nav>ul>li>a:hover::after{
+.topNavBar nav>ul>li.active>a::after{
     content: '';
     display: block;
     position: absolute;
@@ -97,12 +97,23 @@ h2,h3,h4,h5,h6{
     color: #3d4451;
     box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.75);
 }
-.topNavBar .submenu.active{
+.topNavBar li.active> .submenu{
     display: block;
+    animation: submenuSlide .3s;
+}
+@keyframes submenuSlide{
+    0%{
+        margin-right: 100%; 
+    }
+    100%{
+        margin-right: 0%; 
+    }
 }
 .topNavBar .submenu>li{
     white-space: nowrap;
-    padding: 10px 15px;
+    padding: 4px 16px;
+    font-size: 15px;
+    cursor: pointer;
 }
 .topNavBar .logo{
     font-size:26px;
