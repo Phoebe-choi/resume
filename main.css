@@ -27,6 +27,24 @@ h2,h3,h4,h5,h6{
     display: block;
     clear: both;
 }
+[data-x].active{
+    outline: 5px solid red;
+}
+[data-x].offset{
+    transform: translateY(80px);
+}
+[data-x]{
+    transform: translateY(0);
+    transition: all 0.5s;
+}
+@keyframes slideUp{
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
 .topNavBar{
     padding: 16px 0 16px 0;
     position: fixed; /*rs-cover相对屏幕固定，脱离文档流*/
@@ -68,7 +86,8 @@ h2,h3,h4,h5,h6{
     display: block; /*生成一个块元素盒*/
     position: relative;
 }
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highlight>a::after{
     content: '';
     display: block;
     position: absolute;
@@ -299,16 +318,23 @@ section.skillBar .progressBar{
     background-color: #FAE1E1;
     border-radius: 5px;
     margin:6px 0 45px;
+    overflow: hidden;
 }
-section.skillBar .progressBar .progress{
+section.skillBar .progressBar> .progress{
     height: 100%;
     background-color: #e6686a;   
     border-radius: 5px;
+    transform: translateX(0);
+    transition: all 1s;
+}
+section.skillBar.offset .progress{
+    transform: translateX(-100%);
 }
 section.portfolio{
     text-align: center;
     margin-bottom: 100px;
 }
+
 section.portfolio>nav{
     text-align: center;
     display: inline-block;
